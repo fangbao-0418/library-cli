@@ -2,5 +2,21 @@
   "name": "library-cli",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "npx babel --config-file ./config/.babelrc src -d lib --extensions '.ts,.tsx,.jsx,.js'"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.7",
+    "@babel/plugin-transform-typescript": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "gulp": "^4.0.2",
+    "vite": "^2.8.6"
+  },
+  "peerDependencies": {
+    "@types/react": "^17.0.40"
+  }
 }

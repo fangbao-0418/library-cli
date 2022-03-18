@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react",
+    [
+      "@babel/preset-typescript",
+      {
+        "allowDeclareFields": true,
+        "compilerOptions": {
+          "declaration": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-typescript",
+      {
+        "compilerOptions": {
+          "declaration": true
+        }
+      }
+    ]
+  ]
+}
