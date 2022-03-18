@@ -1,11 +1,18 @@
 {
-  "name": "library-cli",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "ns-tool",
+  "version": "1.0.1-alpha.1",
+  "main": "lib/cli/build.js",
   "license": "MIT",
-  "scripts": {
-    "build": "npx babel --config-file ./config/.babelrc src -d lib --extensions '.ts,.tsx,.jsx,.js'"
+  "bin": {
+    "ns-build": "lib/cli/build.js"
   },
+  "scripts": {
+    "build": "node lib/cli/build.js"
+  },
+  "files": [
+    "lib",
+    "tsconfig.json"
+  ],
   "dependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.7",
@@ -13,10 +20,16 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "colorful": "^2.1.0",
+    "commander": "^9.1.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.2",
     "vite": "^2.8.6"
   },
-  "peerDependencies": {
+  "devDependencies": {
     "@types/react": "^17.0.40"
   }
 }
