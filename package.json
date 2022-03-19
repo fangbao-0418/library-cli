@@ -1,6 +1,6 @@
 {
   "name": "ns-tool",
-  "version": "1.0.1-alpha.6",
+  "version": "1.0.1-alpha.7",
   "main": "lib/cli/build.js",
   "license": "MIT",
   "bin": {
@@ -16,17 +16,20 @@
   "dependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.7",
-    "@babel/plugin-transform-typescript": "^7.16.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@babel/preset-typescript": "^7.16.7",
     "colorful": "^2.1.0",
     "commander": "^9.1.0",
+    "core-js": "^3.21.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.2",
     "vite": "^2.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.40"
   }
 }
