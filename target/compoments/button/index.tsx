@@ -1,8 +1,23 @@
 import 'core-js'
 import React, { useEffect } from 'react'
+import { ConfigContext } from '../config-provider'
+import classnames from 'classnames'
 
-const Button = () => {
+interface S {
+  a: string
+}
 
+export interface ButtonProps {
+  prefixCls: string
+  onClick?: () => void
+}
+
+const Button: React.FC<ButtonProps> = (props) => {
+  const {
+    prefixCls: customizePrefixCls,
+  } = props
+  const { getPrefixCls } = React.useContext(ConfigContext);
+  const prefixCls = getPrefixCls('btn', customizePrefixCls);
   useEffect(() => {
     const t = new Promise((resolve) => {
       setTimeout(() => {
@@ -12,7 +27,14 @@ const Button = () => {
   }, [])
 
   return (
-    <button>button</button>
+    <button
+      onClick={props.onClick}
+      className={classnames(
+        prefixCls
+      )}
+    >
+      button
+    </button>
   )
 }
 
